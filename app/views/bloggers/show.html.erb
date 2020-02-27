@@ -1,0 +1,29 @@
+<h1>Bloggers#show</h1>
+<label>Blogger name: </label>
+
+<%=@blogger.name%>
+<br>
+<label>Blogger Age: </label>
+<%=@blogger.age%>
+<br>
+<label> Blogger bio :</label>
+<%=@blogger.bio%>
+
+<%@sum = @blogger.posts.sum do |post|%>
+<br>
+<% post.likes%>
+<%end%>
+<label>Total likes: </label>
+<%=@sum%>
+
+<%=link_to "Featured Post" , post_path(@max)%>
+
+
+
+
+
+
+
+
+
+
